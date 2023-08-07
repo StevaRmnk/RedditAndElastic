@@ -1,0 +1,35 @@
+<div class="container">
+    <div id="slikinRed">
+        <div id="krug" class="row align-items-center">
+            <img src="assets/slike/cudovistesredjeno.png">
+        </div>
+        <p>Stevin Redit</p>
+    </div>
+    <div id="forma" class="row">
+        <form [formGroup]="napraviZajednicuForma" (ngSubmit)="napraviZajednicu()" >
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label for="imeZajednice">Naziv zajednice</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'imeZajednice'" placeholder="naziv zajednice" name="imeZajednice" />
+                    <br>
+                    <span *ngIf="!napraviZajednicuForma.get('imeZajednice')?.valid && napraviZajednicuForma.get('imeZajednice')?.touched">Naziv je ili kraci od 3 ili je prazan</span>
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label for="opisZajednice">Opis zajednice</label><br>
+                    <textarea id="opisZajednice" name="opisZajednice" [formControlName]="'opisZajednice'" placeholder="Opis zajednice"></textarea>
+                    <br>
+                    <span *ngIf="!napraviZajednicuForma.get('opisZajednice')?.valid && napraviZajednicuForma.get('opisZajednice')?.touched">Polje je prazno</span>
+                </div>
+                <div class="form-outline mb-4">
+                    <label for="">Uploaduj PDF opis</label><br>
+                    <input type="file" class="file-upload" (change)="setEvent($event)"  id="files">
+                </div>
+            </div>
+            <div class="row" id="dug">
+                <button id="log" type="submit">Napravi zajednicu</button>
+            </div>
+        </form>       
+    </div>
+    
+</div>

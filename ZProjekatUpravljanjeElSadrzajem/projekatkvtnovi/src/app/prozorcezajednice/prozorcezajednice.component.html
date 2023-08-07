@@ -1,0 +1,11 @@
+<div class="sidebar-view-subreddit">
+    <div style="color: black; font-weight: bold">Pretrazi zajednice</div>
+    <hr />
+    <span *ngFor="let zajednica of zajednice">
+        <span class="subreddit-text"><a href="pregledJedneZajednice/{{zajednica.idZajednice}}">{{zajednica.imeZajednice}}</a></span>
+        <hr />
+    </span>
+    <div style="text-align: center" >
+        <a style="font-weight: bold" routerLink="/sveZajednice">Vidi sve</a>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row" id="redSlike">
+    <div id="krug">
+      <img src="assets/slike/cudovistesredjeno.png">
+    </div>
+  </div>
+  <div class="row" id="redNaslova">
+    <p>Stevin Redit</p>
+  </div>
+  <div id="forma" class="row" [formGroup]="loginForma" (ngSubmit)="ulogujSE()">
+    <form style="margin-left: auto;margin-right:auto;">
+      <div class="form-outline mb-4">
+        <label for="korisnickoIme">Korisnicko ime</label><br>
+        <input type="text" id="korisnickoIme" [formControlName]="'username'" placeholder="korisnicko ime" /><br>
+        <span *ngIf="!loginForma.get('username')?.valid && loginForma.get('username')?.touched">Korisnicko ime ne sme biti prazno</span>
+
+      </div>
+
+      <div class="form-outline mb-4">
+        <label for="lozinka">Lozinka</label><br>
+        <input type="password" id="lozinka" [formControlName]="'password'" placeholder="lozinka" /><br>
+        <span *ngIf="!loginForma.get('lozinka')?.valid && loginForma.get('lozinka')?.touched">Lozinka ne sme biti prazna</span>
+      </div><br>
+      <button id="btnLogovanje" type="submit">Uloguj se</button>
+    </form>
+  </div>
+  <div id="reg">
+    <span>Nemate nalog?</span><button class="btn btn-link" routerLink = "registracija">Registruj se</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div id="redNaslova">
+        <span>Naslov objave:</span><span style="margin-left: 10px;">{{mojaObjava.naslovObjave}}</span>
+        <span style="margin-left:20px">Autor:</span><span>{{mojaObjava.autorObjave}}</span>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="tekst">
+                <p>Tekst objave: </p>
+                <p>{{mojaObjava.tekstObjave}}</p>
+            </div>
+            <div id="komentari">
+            </div>
+        </div>
+        <div class="col">
+            <button id="obrisi" (click)="obrisiObjavu()">Obrisi objavu</button>
+            <button id="izmeni" (click)="izmeniObjavu()">Izmeni objavu</button>
+        </div>
+    </div>
+    
+
+    
+</div>

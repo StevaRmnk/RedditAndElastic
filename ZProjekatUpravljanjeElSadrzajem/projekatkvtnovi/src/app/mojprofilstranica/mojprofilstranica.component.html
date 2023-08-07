@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row" id="redNaslova">
+        <div class="col col-lg-4 col-md-6">
+            <div id="krug">
+                <img src="assets/slike/cudovistesredjeno.png">
+            </div>
+        </div>
+        <div class="col col-lg-8 col-md-6" id="naslov">
+            Moj Profil
+        </div>
+    </div>
+    <div class="row">
+        <div id="krugProfil">
+            <img src="assets/slike/profilslika-.png">
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Karma: </label><span style="font-family: 'Leckerli One',cursive;">{{karmaKorisnika}}</span>
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <label>Korisnicko ime :</label>
+                </div>
+                <div class="col">
+                    <input type="text" value="{{korisnikZaPregled.korisnickoIme}}" readonly/>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="email">E-mail :</label>
+        </div>
+        <div class="col">
+            <input type="text" value="{{korisnikZaPregled.email}}" readonly/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col">
+                    <label>Opis :</label>
+                </div>
+                <div class="col">
+                    <textarea value="{{korisnikZaPregled.opis}}" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label>Datum Registracije: </label>
+        </div>
+        <div class="col">
+            <input type="text" value="{{korisnikZaPregled.datumRegistracije}}" readonly/>
+        </div>
+    </div>
+    <div class="row" id="redDugmeta" (click)="idiNaIzmenu()">
+        <button>Izmeni profil</button>
+    </div>
+ 
+</div>

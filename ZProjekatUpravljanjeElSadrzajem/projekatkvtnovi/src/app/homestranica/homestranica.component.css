@@ -1,0 +1,31 @@
+#redpretrage{
+    margin-top: 10px;
+}
+
+#dugme{
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 25px;
+    background-color: rgb(86, 43, 202);
+    border: none;
+    color: white;
+    font-family:'Leckerli One', cursive;
+    text-shadow: 0 0 4px black;
+    width: 180px;
+    font-size: 25px;
+}
+
+#select{
+    margin-left: 75px;
+    width: 350px;
+    border: 1px solid rgb(86, 43, 202);
+    font-family:'Leckerli One', cursive;
+}
+
+#pretraga{
+    border: 1px solid rgb(86, 43, 202);
+    box-shadow: 0 0 3px rgb(86, 43, 202);
+    font-family:'Leckerli One', cursive;
+    width: 250px;
+}

@@ -1,0 +1,34 @@
+<div class="container">
+    <div id="slikinRed">
+        <div id="krug" class="row align-items-center">
+            <img src="assets/slike/cudovistesredjeno.png">
+        </div>
+        <p>Izmena podataka</p>
+    </div>
+    <div id="forma" class="row">
+        <form [formGroup]="izmeniKorisnikaForma" (ngSubmit)="izmeni()" >
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label for="imeZajednice">Naziv zajednice</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'email'" value="{{korisnikZaPregled.email}}" name="imeZajednice"/>
+                    <br>
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label for="opisZajednice">Opis zajednice</label><br>
+                    <textarea id="opisZajednice" name="opisZajednice" [formControlName]="'opisKorisnika'" value="{{korisnikZaPregled.opis}}"></textarea>
+                    <br>
+                </div>
+            </div>
+            <div class="row" id="dug">
+                <button id="log" type="submit">Izmeni podatke</button>
+                
+            </div>
+            <div class="row" id="dug">
+                <button id="log" (click)="naIzmenu()">Izmena Lozinke</button>
+            </div>
+           
+        </form>       
+    </div>
+    
+</div>

@@ -1,0 +1,23 @@
+<h2>Sve zajednice</h2>
+<div class="container" id="redpretrage">
+    <form [formGroup]="pretraziForma"  (ngSubmit)="pretrazi()">
+        <div class="row" id="red">
+            <input type="text" id="pretraga"  [formControlName]="'pojam'" placeholder="Unesite tekst za pretragu" >
+            <select name="odabir" id="select" [formControlName]="'odabir'">
+                <option value=""  disabled selected hidden>Pretraži po</option>
+                <option value="naziv">Naziv zajednice</option>
+                <option value="opis">Opis zajednice</option>
+                <option value="pdf">PDF zajednice</option>
+            </select>
+        </div><br>
+        <div class="row" >
+            <input type="submit" id="dugme" value="Pretraži">
+        </div>
+    </form>    
+</div>
+<div *ngFor="let zajednica of zajednice">
+    <div class="container" id="conta">
+        <h3><a href="pregledJedneZajednice/{{zajednica.idZajednice}}">{{zajednica.imeZajednice}}</a></h3>
+        <p>{{zajednica.opisZajednice}}</p>
+    </div>
+</div>

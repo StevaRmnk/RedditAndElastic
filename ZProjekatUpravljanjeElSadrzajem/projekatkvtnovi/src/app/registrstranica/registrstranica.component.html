@@ -1,0 +1,39 @@
+<div class="container">
+    <div id="slikinRed">
+        <div id="krug" class="row align-items-center">
+            <img src="assets/slike/cudovistesredjeno.png">
+        </div>
+        <p>Stevin Redit</p>
+    </div>
+    <div id="forma" class="row">
+        <form [formGroup]="registracionaForma" (ngSubmit)="registrujSe()">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label for="eMail">Email</label><br>
+                    <input type="email" id="eMail" [formControlName]="'email'" placeholder="email" name="eMail" />
+                    <br>
+                    <span *ngIf="!registracionaForma.get('eMail')?.valid && registracionaForma.get('eMail')?.touched">Email nije ispravan ili je polje prazno</span>
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label for="korisnickoIme">Korisnicko ime</label><br>
+                    <input type="text" id="korisnickoIme" [formControlName]="'korisnickoIme'" placeholder="korisnicko ime"   name="korisnickoIme" />
+                    <br>
+                    <span *ngIf="!registracionaForma.get('korisnickoIme')?.valid && registracionaForma.get('korisnickoIme')?.touched">korisnickoIme je prazno</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label for="lozinka">Lozinka</label><br>
+                    <input type="password" id="lozinka" [formControlName]="'lozinka'" placeholder="lozinka" name="lozinka"/>
+                    <br>
+                    <span *ngIf="!registracionaForma.get('lozinka')?.valid && registracionaForma.get('lozinka')?.touched">Lozinka je prazna</span>
+                </div>
+            </div>
+            <div class="row" id="dug">
+                <button id="log" type="submit">Registruj se</button>
+            </div>
+        </form>       
+    </div>
+    
+</div> 

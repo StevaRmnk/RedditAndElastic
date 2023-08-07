@@ -1,0 +1,28 @@
+
+<div class="row post" *ngFor="let objava of objave">
+  <app-dugmereakcije [jednaobjava]="objava" class="col col-md-2 col-xl-2 col-lg-2;"></app-dugmereakcije>
+
+  <div class="col-md-10 col-lg-10 col-xl-10">
+    <span class="subreddit-info">
+      <span class="subreddit-text">{{objava.zajednica}}</span>
+      <span> . Postavio: <a class="username">{{objava.autorObjave}}</a></span>
+      <span> . {{objava.datumKreiranja}}</span>
+    </span>
+    <hr />
+    <div class="post-title">
+      <a class="postname">{{objava.naslovObjave}}</a>
+    </div>
+    <div>
+      <p class="post-text" [innerHtml]="objava.tekstObjave"></p>
+    </div>
+    <hr />
+    <span>
+      <a class="btnCommments" role="button">
+      </a>
+      <button class="login" (click)="procitajObjavu(objava.idObjave)">
+        Procitaj objavu
+      </button>
+    </span>
+  </div>
+</div>
+  

@@ -1,0 +1,29 @@
+<div class="container" id="zajedn" *ngIf="mojazajednica">
+    <h2>Zajednica: {{mojazajednica.imeZajednice}}</h2>
+    <br>
+    <h4>Opis: {{mojazajednica.opisZajednice}}</h4>
+    <span class="subreddit-text"><a href="izmenaZajednice/{{mojazajednica.idZajednice}}">Izmeni Zajednicu</a></span>
+</div>
+<div class="row">
+    <div class="col col-xl-1 col-md-1 col-lg-1">
+    </div>
+    <div class="col col-xl-7 col-md-7 col-lg7">
+        <div *ngFor="let objava of mojazajednica.listaObjavi">
+            <div class="container" id="obja">
+                <span>Naslov objave:</span><p id="naslov"><a href="pregledJedneObjave/{{objava.idObjave}}">{{objava.naslovObjave}}</a></p>
+                <span>Tekst objave:</span><p>{{objava.tekstObjave}}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="sidebar-view-subreddit">
+            <div style="color: black; font-weight: bold">Pravila</div>
+            <hr/>
+            <span >
+                <span class="subreddit-text">Dodaj pravila</span>
+                <hr/>
+            </span>
+        </div>
+    </div>
+</div>
+

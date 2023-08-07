@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row" id="redNaslova">
+        <div class="col col-lg-4 col-md-6">
+            <div id="krug">
+                <img src="assets/slike/cudovistesredjeno.png">
+            </div>
+        </div>
+        <div class="col col-lg-8 col-md-6" id="naslov">
+            Dodavanje Objave
+        </div>
+    </div>
+    <form [formGroup]="dodajObjavuForma" (ngSubmit)="napraviObjavu()">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <label>Dodaj naslov objave</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" [formControlName]="'naslovObjave'" placeholder="naslov objave"/><br>
+                        <span *ngIf="!dodajObjavuForma.get('naslovObjave')?.valid && dodajObjavuForma.get('naslovObjave')?.touched">Naslov objave je prazan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <label>Dodaj tekst objave</label>
+                    </div>
+                    <div class="col">
+                        <textarea [formControlName]="'tekstObjave'" placeholder="tekst objave"></textarea><br>
+                        <span *ngIf = "!dodajObjavuForma.get('tekstObjave')?.valid && dodajObjavuForma.get('tekstObjave')?.touched">Tekst objave je prazan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="redzajednice">
+                <label>Izaberi zajednicu</label>
+                <select name="zajednica" id="zselect" [formControlName]="'zajednica'" style="margin-left: 3%;" >
+                    <option *ngFor="let zajednica of mojeZajednice" [value]="zajednica.idZajednice">{{zajednica.imeZajednice}}</option>
+                </select>
+            </div>
+    
+        </div>
+        <div class="row">
+            <div class="col" id="redpdf">
+                <label>Izaberi PDF</label>
+                <input type="file" class="file-upload" (change)="setEvent($event)" id="files">
+            </div>
+    
+        </div>
+        <div class="row" id="redDugmeta">
+            <button id="dugmeZaObjavu" type="submit">Objavi</button>
+        </div>
+    </form>
+    
+
+</div>

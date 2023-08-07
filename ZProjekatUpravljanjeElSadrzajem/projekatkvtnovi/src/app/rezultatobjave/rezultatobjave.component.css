@@ -1,0 +1,74 @@
+.container{
+    margin-top: 20px;
+    background-color: rgb(235, 230, 230);
+    border: rgb(86, 43, 202);
+    box-shadow: 0 0 3px rgb(86, 43, 202);
+    font-family: 'Leckerli One',cursive;
+    border-radius: 20px;
+}
+
+h3{
+    color: rgb(86, 43, 202);
+    text-shadow: 0 0 3px white;
+    text-decoration: dotted
+}
+
+h1{
+    color: rgb(86, 43, 202);
+    text-shadow: 0 0 3px white;
+    text-decoration: dotted;
+    font-family: 'Leckerli One',cursive;
+    text-align: center;
+}
+
+h3:hover{
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+h2{
+    text-align: center;
+    color: rgb(86, 43, 202);
+    font-family: 'Leckerli One',cursive;
+}
+
+
+#redpretrage{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+}
+
+#dugme{
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 25px;
+    background-color: rgb(86, 43, 202);
+    border: none;
+    color: white;
+    font-family:'Leckerli One', cursive;
+    text-shadow: 0 0 4px black;
+    width: 180px;
+    font-size: 25px;
+}
+
+#select{
+    margin-left: 75px;
+    width: 350px;
+    border: 1px solid rgb(86, 43, 202);
+    font-family:'Leckerli One', cursive;
+}
+
+#pretraga{
+    border: 1px solid rgb(86, 43, 202);
+    box-shadow: 0 0 3px rgb(86, 43, 202);
+    font-family:'Leckerli One', cursive;
+    width: 250px;
+    margin-left: 75px;
+}

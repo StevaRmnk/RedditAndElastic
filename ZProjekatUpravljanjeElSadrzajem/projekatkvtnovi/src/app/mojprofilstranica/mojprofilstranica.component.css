@@ -1,0 +1,114 @@
+.container{
+    margin-top: 20px;
+    background-color: rgb(239, 238, 240);
+    box-shadow: 0 0 10px black;
+    border-radius: 25px;
+}
+
+
+#krug{
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+}
+
+#krugProfil{
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#redNaslova{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: rgb(86, 43, 202);
+}
+
+#naslov{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Leckerli One', cursive;
+    text-shadow: 0 0 4px black;
+}
+
+label{
+    color: rgb(86, 43, 202);
+    font-size: 40px;
+    font-family: 'Leckerli One', cursive;
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
+button{
+    border-radius: 25px;
+    background-color: rgb(86, 43, 202);
+    border: none;
+    color: white;
+    font-family:'Leckerli One', cursive;
+    text-shadow: 0 0 4px black;
+    width: 180px;
+    font-size: 25px;
+    margin-right: 4px;
+}
+
+input{
+    height: 45px;
+    margin-left: 3%;
+    width: 350px;
+    border-radius: 25px;
+    border: 1px solid rgb(86, 43, 202);
+    box-shadow: 0 0 3px rgb(86, 43, 202);
+    font-family: 'Leckerli One', cursive;
+}
+
+#redDugmeta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+textarea{
+    width: 350px;
+    height: 100%;
+    margin-left: 3%;
+    border-radius: 25px;
+    border: 1px solid rgb(86, 43, 202);
+    box-shadow: 0 0 3px rgb(86, 43, 202);
+    font-family: 'Leckerli One',cursive;
+}
+
+select{
+    width: 20%;
+}
+
+button:hover{
+    background-color: white;
+    box-shadow: 0 0 3px white;
+    color: rgb(86, 43, 202);
+    text-shadow: 0 0 3px white;
+    width: 180px;
+    border: 1px solid rgb(86, 43, 202);
+}
+
+.row{
+    padding: 2%;
+}

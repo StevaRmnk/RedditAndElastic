@@ -1,0 +1,40 @@
+<div class="container">
+    <div id="slikinRed">
+        <div id="krug" class="row align-items-center">
+            <img src="assets/slike/cudovistesredjeno.png">
+        </div>
+        <p>Izmena Lozinke</p>
+    </div>
+    <div id="forma" class="row">
+        <form [formGroup]="izmeniLozinkuForma" (ngSubmit)="izmeniLozinku()" >
+            <div class="col">
+
+                <div class="form-outline mb-4">
+                    <label for="imeZajednice">Stara Lozinka</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'staraLozinka'" placeholder="Stara lozinka"/><br>
+                    <span *ngIf="!izmeniLozinkuForma.get('staraLozinka')?.valid && izmeniLozinkuForma.get('staraLozinka')?.touched">Neispravno</span>
+                    <br>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <label for="imeZajednice">Nova Lozinka</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'novaLozinka'" placeholder="Nova lozinka"/><br>
+                    <span *ngIf="!izmeniLozinkuForma.get('novaLozinka')?.valid && izmeniLozinkuForma.get('novaLozinka')?.touched">Neispravno</span>
+                    <br>
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label for="opisZajednice">Ponovljena Lozinka</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'ponovljenaLozinka'" placeholder="Ponovi lozinku"/>
+                    <br>
+                    <span *ngIf="!izmeniLozinkuForma.get('ponovljenaLozinka')?.valid && izmeniLozinkuForma.get('ponovljenaLozinka')?.touched">Neispravna ponovljena lozinka</span>
+                </div>
+            </div>
+            <div class="row" id="dug">
+                <button id="log" type="submit">Izmeni Lozinku</button>
+            </div>
+        </form>       
+    </div>
+    
+</div>

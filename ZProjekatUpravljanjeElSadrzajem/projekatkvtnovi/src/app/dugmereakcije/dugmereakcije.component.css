@@ -1,0 +1,18 @@
+img{
+    height: 25px;
+    width: 25px;
+}
+
+#do:hover{
+    background-color: red;
+}
+
+
+#uo:hover{
+    background-color: green;
+}
+
+img:active{
+    opacity: 0.45;
+}
+

@@ -1,0 +1,29 @@
+<div class="container">
+    <div id="slikinRed">
+        <div id="krug" class="row align-items-center">
+            <img src="assets/slike/cudovistesredjeno.png">
+        </div>
+        <p>Stevin Redit</p>
+    </div>
+    <div id="forma" class="row">
+        <form [formGroup]="izmeniZajednicuForma" (ngSubmit)="izmeniZajednicu()" >
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <label for="imeZajednice">Naziv zajednice</label><br>
+                    <input type="text" id="imeZajednice" [formControlName]="'imeZajednice'" value="{{mojazajednica.imeZajednice}}" name="imeZajednice"/>
+                    <br>
+                </div>
+    
+                <div class="form-outline mb-4">
+                    <label for="opisZajednice">Opis zajednice</label><br>
+                    <textarea id="opisZajednice" name="opisZajednice" [formControlName]="'opisZajednice'" value="{{mojazajednica.opisZajednice}}"></textarea>
+                    <br>
+                </div>
+            </div>
+            <div class="row" id="dug">
+                <button id="log" type="submit">Izmeni zajednicu</button>
+            </div>
+        </form>       
+    </div>
+    
+</div>
